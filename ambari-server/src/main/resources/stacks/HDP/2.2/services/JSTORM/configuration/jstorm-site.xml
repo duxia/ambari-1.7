@@ -1,0 +1,99 @@
+<?xml version="1.1"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<configuration supports_final="true">
+  <property>
+    <name>java.library.path|jstorm</name>
+    <value>/usr/local/lib:/opt/local/lib:/usr/lib</value>
+    <description>JVM path</description>
+  </property>
+  <property>
+    <name>storm.local.dir|jstorm</name>
+    <value>/usr/local/services/jstorm</value>
+    <description>Jstorm 本地路径</description>
+  </property>
+  <property>
+    <name>_storm.conf.dir|jstorm</name>
+    <value>/usr/local/services/jstorm/conf</value>
+    <description>Jstorm 配置文件本地路径</description>
+  </property>
+  <property>
+    <name>_storm.tomcat.dir|jstorm</name>
+    <value>/usr/local/services/tomcat</value>
+    <description>Jstorm UI 依赖的Tomcat根路径</description>
+  </property>
+  <property>
+    <name>storm.zookeeper.servers|jstorm</name>
+    <value>[host1,host2]</value>
+    <description>zk 服务主机名列表</description>
+  </property>
+  <property>
+    <name>storm.zookeeper.port|jstorm</name>
+    <value>2181</value>
+    <description>zk 服务端口名列表</description>
+  </property>
+  <property>
+    <name>storm.zookeeper.root|jstorm</name>
+    <value>/jstorm</value>
+    <description>jstorm服务在zk中的根路径</description>
+  </property>
+  <property>
+    <name>storm.zookeeper.session.timeout|jstorm</name>
+    <value>20000</value>
+    <description>zk客户端回话超时时间(ms)</description>
+  </property>
+  <property>
+    <name>storm.zookeeper.connection.timeout|jstorm</name>
+    <value>15000</value>
+    <description>zk客户端连接超时时间(ms)</description>
+  </property>
+  <property>
+    <name>nimbus.host|jstorm</name>
+    <value>127.0.0.1</value>
+    <description>nimbus主机地址</description>
+  </property>
+  <property>
+    <name>supervisor.slots.ports|jstorm</name>
+    <value>[6800, 6801]</value>
+    <description>supervisor slot 端口号</description>
+  </property>
+  <property>
+    <name>supervisor.slots.ports.base|jstorm</name>
+    <value>6800</value>
+    <description>supervisor slot 端口号起始值</description>
+  </property>
+  <property>
+    <name>supervisor.slots.port.cpu.weight|jstorm</name>
+    <value>1</value>
+    <description>supervisor slot cpu权重</description>
+  </property>
+  <property>
+    <name>worker.memory.size|jstorm</name>
+    <value>536870912</value>
+    <description>worker的jvm内存大小(byte)</description>
+  </property>
+  <property>
+    <name>topology.performance.metrics|jstorm</name>
+    <value>true</value>
+    <description>是否开启性能监控</description>
+  </property>
+</configuration>
